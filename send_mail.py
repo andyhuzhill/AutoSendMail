@@ -26,7 +26,7 @@ server_addr = "smtp.qq.com"
 def send_mail(subject, server_addr, from_addr, passwd, to_addr, msg_text, file_list):
     msg = MIMEMultipart()
 
-    msg["From"] = _format_addr(" <{0}>".format(from_addr))
+    msg["From"] = _format_addr("<{0}>".format(from_addr))
     msg["To"] = _format_addr(",".join(to_addr))
     msg["Subject"] = Header(subject, 'utf-8').encode()
 
